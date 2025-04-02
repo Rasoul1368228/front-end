@@ -81,6 +81,31 @@
         #dark-mode-toggle i {
             font-size: 24px;
         }
+
+        /* اصلاح هدر برای تراز مناسب */
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-wrapper .brand-logo {
+            flex-grow: 1;
+        }
+
+        .nav-wrapper .sidenav-trigger {
+            order: 2;
+        }
+        
+        /* اصلاح وضعیت منوی موبایل */
+        .sidenav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            z-index: 1000;
+            padding-top: 50px;
+        }
     </style>
 </head>
 <body>
@@ -110,7 +135,8 @@
             <li>
                 <div class="user-view">
                     <div class="background blue darken-3"></div>
-                    <!-- آواتار حذف شد -->
+                    <!-- آواتار اضافه شده -->
+                    <img src="./image/avatar.png" alt="آواتار" class="avatar">
                     <a href="#home"><span class="white-text name">حیدروند طراح  و کارشناس فروش</span></a>
                     <a href="#home"><span class="white-text email">rasoul6856@gmail.com</span></a>
                 </div>
@@ -135,13 +161,6 @@
             <div class="col s12 m6">
                 <img src="./image/avatar.png" alt="آواتار" class="avatar">
             </div>
-        </div>
-    </section>
-
-    <!-- تنظیمات -->
-    <section id="settings" class="section container">
-        <h2>تنظیمات</h2>
-        <div class="row">
         </div>
     </section>
 
