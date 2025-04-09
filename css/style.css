@@ -1,13 +1,115 @@
-
-body {
-        display: flex;
-        min-height: 100vh;
-        flex-direction: column;
-         src: url('../font/Vazir-FD-WOL.ttf') format('truetype');
+body{
+        src: url('../font/Vazir-FD-WOL.ttf') format('truetype');
         font-family: 'Vazir', sans-serif;
+        font-size: 20px;
+        background-color: rgb(161, 244, 223);
+}* {
+        box-sizing: border-box;
       }
-    
-      main {
-        flex: 1 0 auto;
+      
+      body {
+        src: url('../font/Vazir-FD-WOL.ttf') format('truetype');
+        font-family: 'Vazir', sans-serif;
+        font-size: 20px;
+        background-color: rgb(161, 244, 223);
+        margin: 0;
+        padding: 0;
+        direction: rtl;
       }
-          
+      
+      .header {
+        height: 50px;
+        width: 1200px;
+        background-color: chartreuse;
+        border: 2px solid black;
+        border-radius: 10px;
+        margin: 10px auto;
+        color: #fff;
+        text-align: center;
+        line-height: 50px;
+      }
+      .footer{
+        height: 100px;
+        width: 1200px;
+        background-color: chartreuse;
+        border: 1px solid black;
+        border-radius: 10px;
+        margin: 10px auto;
+        color: #fff;
+        text-align: center;
+        line-height: 50px;
+
+      }
+      
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 10px;
+        width: 800px;
+        margin: 20px auto;
+        justify-content: center;
+      }
+      
+      .container div {
+        height: 200px;
+        width: 200px;
+        padding: 5px;
+        border: 5px solid red;
+        background-color: rgb(203, 169, 235);
+        color: black;
+        text-align: center;
+        line-height: 190px;
+        border-radius: 8px;
+      }
+      .navbar {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        left: 20px;
+}
+      
+      .navbar ul {
+        display: flex;
+        list-style-type: none;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+      }
+      
+      .navbar ul li {
+        margin: 0 15px;
+      }
+      
+      .navbar ul li a {
+        text-decoration: none;
+        color: #070202;
+        font-size: 18px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+      
+      .navbar ul li a:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+      }
+      /* ریسپانسیو برای موبایل */
+@media screen and (max-width: 768px) {
+        .navbar ul {
+          flex-direction: column; /* منو به صورت عمودی نمایش داده می‌شود */
+          align-items: center;
+        }
+        
+        .navbar ul li {
+          margin: 10px 0; /* فاصله عمودی برای لینک‌ها */
+        }
+        
+        .container {
+          width: 100%; /* عرض به 100% تغییر می‌کند */
+          flex-direction: column; /* باکس‌ها به صورت عمودی در می‌آیند */
+        }
+      
+        .container div {
+          width: 90%; /* عرض باکس‌ها به 90% تغییر می‌کند */
+        }
+      }
