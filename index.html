@@ -1,194 +1,31 @@
 <!DOCTYPE html>
-<html lang="fa">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>نکست وب</title>
+<html dir="rtl" lang="fa">
+  <head>
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+    <link rel="stylesheet" href="./css/styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
 
-    <!-- Materialize CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <!-- فونت فارسی -->
-    <link href="https://cdn.jsdelivr.net/npm/font-vazir@24.1.0/dist/font-vazir.min.css" rel="stylesheet">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-    <style>
-        /* استایل دارک مود */
-        body.dark-mode {
-            background-color: #121212;
-            color: #e0e0e0;
-        }
-
-        .dark-mode .navbar {
-            background-color: #333;
-        }
-
-        .dark-mode .card {
-            background-color: #1e1e1e;
-            color: #e0e0e0;
-        }
-
-        .dark-mode .footer {
-            background-color: #1e1e1e;
-        }
-
-        .dark-mode .btn {
-            background-color: #6200ea;
-        }
-
-        /* اصلاح هدر */
-        .nav-wrapper {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px;
-        }
-
-        /* استایل دکمه دارک مود */
-        #dark-mode-toggle {
-            background-color: #6200ea;
-            border-radius: 50%;
-            padding: 10px;
-            cursor: pointer;
-        }
-
-        /* استایل بهبود یافته منوهای موبایل */
-        .sidenav {
-            width: 250px;
-        }
-
-        /* اصلاح وضعیت منوی موبایل */
-        .sidenav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            z-index: 1000;
-            padding-top: 50px;
-        }
-
-        /* اصلاح تراز دکمه دارک مود */
-        #dark-mode-toggle i {
-            font-size: 20px;
-        }
-
-        /* اصلاح وضعیت هدر برای تراز مناسب */
-        .nav-wrapper .brand-logo {
-            flex-grow: 1;
-            font-size: 20px;
-            font-family: 'Vazir', sans-serif;
-        }
-
-        .nav-wrapper .sidenav-trigger {
-            order: 2;
-        }
-
-        /* استایل آواتار منوی موبایل */
-        .avatar {
-            width: 80px;
-            height: 80px;
-            border-radius: 40%;
-            object-fit: cover;
-        }
-
-        /* استایل منوی موبایل */
-        .sidenav .user-view {
-            padding: 20px;
-            text-align: center;
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <nav class="blue darken-3 z-depth-1">
-            <div class="nav-wrapper container">
-                <a href="#" class="brand-logo left">نکست وب</a>
-                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a href="#home">خانه</a></li>
-                    <li><a href="#services">خدمات</a></li>
-                    <li><a href="#portfolio">نمونه کارها</a></li>
-                    <li><a href="#blog">بلاگ</a></li>
-                    <li><a href="#about">درباره ما</a></li>
-                    <li><a href="#settings"><i class="material-icons">settings</i></a></li>
-                </ul>
-                <!-- دکمه دارک مود کنار منو -->
-                <button id="dark-mode-toggle" class="btn-floating btn-small waves-effect waves-light">
-                    <i class="material-icons">brightness_4</i>
-                </button>
-            </div>
-        </nav>
-
-        <!-- منوی موبایل -->
-        <ul class="sidenav z-depth-1" id="mobile-demo">
-            <li>
-                <div class="user-view">
-                    <div class="background blue darken-3"></div>
-                    <!-- آواتار اضافه شده -->
-                    <img src="./image/avatar.jpg" alt="آواتار" class="avatar">
-                    <a href="#home"><span class="white-text name">حیدروند طراح  و کارشناس فروش</span></a><br>
-                    <a href="#home"><span class="white-text email">rasoul6856@gmail.com</span></a>
-                </div>
-            </li>
-            <li><a href="#home" class="waves-effect"><i class="material-icons">home</i>خانه</a></li>
-            <li><a href="#services" class="waves-effect"><i class="material-icons">build</i>خدمات</a></li>
-            <li><a href="#portfolio" class="waves-effect"><i class="material-icons">work</i>نمونه کارها</a></li>
-            <li><a href="#blog" class="waves-effect"><i class="material-icons">article</i>بلاگ</a></li>
-            <li><a href="#about" class="waves-effect"><i class="material-icons">info</i>درباره ما</a></li>
-            <li><a href="#settings" class="waves-effect"><i class="material-icons">settings</i>تنظیمات</a></li>
+    <div class="header">
+      <nav class="navbar">
+        <ul>
+          <li><a href="#">خانه</a></li>
+          <li><a href="#">درباره ما</a></li>
+          <li><a href="#">خدمات</a></li>
+          <li><a href="#">تماس با ما</a></li>
         </ul>
-    </header>
+      </nav>
+    </div>
 
-    <!-- محتوا صفحه اصلی -->
-    <section id="home" class="section container">
-        <h2>خوش آمدید به نکست وب!</h2>
-        <div class="row">
-            <div class="col s12 m6">
-                <p>خدمات طراحی سایت و توسعه وب‌سایت‌های حرفه‌ای برای کسب‌وکارها.</p>
-                <a href="#services" class="btn blue darken-3">خدمات ما</a>
-            </div>
-            <div class="col s12 m6">
-                <img src=".#" alt="آواتار" class="avatar">
-            </div>
-        </div>
-    </section>
+    <div class="container">
+      <div> متن تستی </div>
+      <div>متن تستی دوم</div>
+      <div> متن تستی سوم </div>
+    </div>
 
-    <footer class="page-footer blue darken-3">
-        <div class="container">
-            <div class="row">
-                <div class="col s12 l6">
-                    <h5>نکست وب</h5>
-                    <p>بهترین خدمات طراحی سایت و توسعه کسب‌وکار آنلاین.</p>
-                </div>
-                <div class="col s12 l4 offset-l2">
-                    <h5>دسترسی سریع</h5>
-                    <ul>
-                        <li><a class="white-text" href="#portfolio">نمونه کارها</a></li>
-                        <li><a class="white-text" href="#blog">بلاگ</a></li>
-                        <li><a class="white-text" href="#about">درباره ما</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Materialize JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script>
-        // فعال کردن منوی موبایل
-        document.addEventListener('DOMContentLoaded', function() {
-            var elems = document.querySelectorAll('.sidenav');
-            M.Sidenav.init(elems, { edge: 'right' });
-        });
-
-        // فعال کردن دارک مود
-        document.getElementById("dark-mode-toggle").addEventListener("click", function() {
-            document.body.classList.toggle("dark-mode");
-        });
-    </script>
-</body>
+    <footer class="footer">فوتر</footer>
+  </body>
 </html>
