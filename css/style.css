@@ -2,7 +2,7 @@
 body {
     padding: 0;
     margin: 0;
-    font-family: 'Dana', sans-serif;
+    font-family: 'Dana',fantasy;
     font-size: 14px;
     background-color: #f79f1f;
     display: flex;
@@ -44,8 +44,8 @@ body {
 }
 
 /* افکت هاور برای div ها */
-.box-container > div:hover {
-    cursor: pointer;
+.box-container > div:hover {  
+    cursor:help;
     transform: translateY(-10px); /* باکس کمی بالا می‌آید */
     box-shadow: 0 12px 25px rgba(31, 30, 30, 0.7); /* سایه قشنگ دور باکس */
 }
@@ -86,6 +86,8 @@ header nav ul li a {
 
 /* هاور لینک‌ها */
 header nav ul li a:hover {
+   
+    font-size: larger;
     color: #f1c40f;
     transform: scale(1.1); /* بزرگتر شدن لینک هنگام هاور */
 }
@@ -176,9 +178,9 @@ footer input[type="text"] {
 }
 
 /* ریسپانسیو برای موبایل */
-@media (max-width: 600px) {
+@media (max-width: 580px) {
     body {
-        font-size: 14px;
+        font-size: 12px;
     }
     
     footer {
