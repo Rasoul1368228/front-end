@@ -1,119 +1,218 @@
-body{
-        src: url('../font/Vazir-FD-WOL.ttf') format('truetype');
-        font-family: 'Vazir', sans-serif;
-        font-size: 20px;
-        background-color:azure;
-}* {
-        box-sizing: border-box;
-      }
-      
-      body {
-        src: url('../font/Vazir-FD-WOL.ttf') format('truetype');
-        font-family: 'Vazir', sans-serif;
-        font-size: 16px;
-        margin: 0;
-        padding: 0;
-        direction: rtl;
-      }
-      
-      .header {
-        height: 50px;
-        width: calc(100%);
-        background-color: rgb(247, 250, 245);
-        border: 2px solid black;
-        border-radius: 10px;
-        margin: 10px auto;
-        color: #fff;
-        text-align: center;
-        line-height: 50px;
-      }
-      .footer{
-        height: 200px;
-        width: 1200px;
-        background-color: rgb(242, 245, 246);
-        /* border: 1px solid black; */
-        border-radius: 10px;
-        margin: 10px auto;
-        color: #090000;
-        text-align: center;
-        line-height: 50px;
-
-      }
-      p{
-       cursor: help;
-       animation: backwards;
-
-      }
-      
-      .container {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        gap: 10px;
-        width: 800px;
-        margin: 20px auto;
-        justify-content: center;
-      }
-      
-      .container div {
-        height: 200px;
-        width: 180px;
-        padding: 5px;
-        border: 1px solid rgb(9, 0, 0);
-        background-color: rgb(244, 236, 252);
-        color: black;
-        text-align: center;
-        line-height: 190px;
-        border-radius: 50px;
-      }
-      .navbar {
-        position: absolute;
-        top: 10px;
-        right: 20px;
-        left: 20px;
+/* استایل برای بدنه‌ی کل صفحه */
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Dana', sans-serif;
+    font-size: 14px;
+    background-color: #f79f1f;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* برای جا دادن فوتر در پایین */
+    align-items: center;
+    min-height: 100vh;
+    line-height: 1.2; /* تنظیم فاصله خطوط برای راحتی در خواندن */
 }
-      
-      .navbar ul {
-        display: flex;
-        list-style-type: none;
-        justify-content: center;
-        padding: 0;
-        margin: 0;
-      }
-      
-      .navbar ul li {
-        margin: 0 15px;
-      }
-      
-      .navbar ul li a {
-        text-decoration: none;
-        color: #070202;
-        font-size: 18px;
-        padding: 10px 20px;
-        border-radius: 5px;
-        transition: background-color 0.3s;
-      }
-      
-      .navbar ul li a:hover {
-        background-color: rgba(255, 255, 255, 0.3);
-      }
-      /* ریسپانسیو برای موبایل */
-@media screen and (max-width: 768px) {
-        .navbar ul {
-          flex-direction: column; /* منو به صورت عمودی نمایش داده می‌شود */
-          align-items: center;
-        }
-        
-        .navbar ul li {
-          margin: 10px 0; /* فاصله عمودی برای لینک‌ها */
-        }
-        
-        .container {
-          width: 100%; /* عرض به 100% تغییر می‌کند */
-          flex-direction: column; /* باکس‌ها به صورت عمودی در می‌آیند */
-        }
-      
-        .container div {
-          width: 90%; /* عرض باکس‌ها به 90% تغییر می‌کند */
-        }
-      }
+
+/* استایل برای تمام divها (باکس‌ها) */
+.box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* فاصله بین باکس‌ها */
+    padding: 20px;
+    width: 100%; /* تنظیم عرض به 100% */
+    max-width: 1200px; /* حداکثر عرض */
+}
+
+/* استایل برای هر باکس */
+.box-container > div {
+    box-shadow: 15px #110900;
+    line-height: 1.5;
+    background-color: #dff9fb;
+    margin: 10px;
+    padding: 10px; /* بیشتر کردن padding برای خوانایی بیشتر */
+    min-height: 110px;
+    width: 260px;
+    border: 1px solid black;
+    border-radius: 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease; /* اضافه کردن transition برای حرکت نرم */
+}
+
+/* افکت هاور برای div ها */
+.box-container > div:hover {
+    cursor: pointer;
+    transform: translateY(-10px); /* باکس کمی بالا می‌آید */
+    box-shadow: 0 12px 25px rgba(31, 30, 30, 0.7); /* سایه قشنگ دور باکس */
+}
+
+/* هدر سایت */
+header {
+    width: 100%;
+    background-color: #130f40;
+    padding: 15px 0; /* کمی بیشتر کردن padding برای زیبایی بیشتر */
+    text-align: center;
+    position: sticky; /* هدر ثابت می‌شود */
+    top: 0; /* در بالای صفحه قرار می‌گیرد */
+    z-index: 100; /* اطمینان از این که هدر همیشه روی بقیه محتویات باشد */
+}
+
+/* ناوبری داخل هدر */
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* آیتم‌های لیست */
+header nav ul li {
+    margin: 0 15px;
+}
+
+/* لینک‌های منو */
+header nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* هاور لینک‌ها */
+header nav ul li a:hover {
+    color: #f1c40f;
+    transform: scale(1.1); /* بزرگتر شدن لینک هنگام هاور */
+}
+
+/* فوتر سایت */
+footer {
+    width: 100%;
+    background-color: #30336b;
+    color: white;
+    padding: 20px 50px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    text-shadow: 2px 2px 1px #d63031;
+    box-sizing: border-box;
+}
+
+/* بخش‌های داخل فوتر */
+footer section {
+    margin: 10px 0;
+    flex: 1;
+    min-width: 250px;
+}
+
+/* بخش تماس با ما */
+#contact {
+    flex: 2;
+    text-align: left;
+}
+
+/* بخش لینک‌های مفید */
+#links {
+    flex: 1;
+    text-align: left;
+}
+
+/* بخش حقوق محفوظ */
+#rights {
+    font-size: 14px;
+    padding: 5px;
+    margin-top: auto;
+    text-align: left;
+}
+
+/* دکمه عضویت خبرنامه */
+footer button {
+    background-color: #f1c40f;
+    color: #130f40;
+    border: none;
+    padding: 10px 20px; /* بزرگتر کردن دکمه */
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* هاور دکمه */
+footer button:hover {
+    background-color: #ffbe76;
+    transform: scale(1.05); /* بزرگتر شدن دکمه هنگام هاور */
+}
+
+/* ورودی ایمیل */
+footer input[type="text"] {
+    padding: 8px; /* افزایش padding */
+    margin-top: 10px;
+    border-radius: 5px;
+    border: none;
+    width: 35%; /* کمی عرض ورودی ایمیل را بیشتر کنیم */
+}
+
+/* استایل برای لیست لینک‌ها */
+#links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#links ul li {
+    margin-bottom: 10px;
+}
+
+#links ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+/* ریسپانسیو برای موبایل */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+    
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    footer section {
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
+    
+    /* بخش تماس با ما */
+    #contact {
+        text-align: center;
+    }
+    
+    /* بخش لینک‌ها */
+    #links {
+        text-align: center;
+    }
+    
+    /* بخش حقوق محفوظ */
+    #rights {
+        text-align: center;
+    }
+
+    .box-container {
+        flex-direction: column; /* برای موبایل باکس‌ها را ستونی بچین */
+        align-items: center;
+    }
+
+    .box-container > div {
+        width: 90%; /* برای موبایل عرض را به 90% کاهش بده */
+    }
+}
