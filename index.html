@@ -1,37 +1,85 @@
 <!DOCTYPE html>
 <html dir="rtl" lang="fa">
-  <head>
-    <link rel="icon" type="image/png" href="./images/favicon.png">
-    <link rel="stylesheet" href="./css/style.css" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>سایت خودم جدید</title>
-  </head>
-  <body>
+<head>
+    <link href="https://fonts.cdnfonts.com/css/dana" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>درباره تیم ما</title>
+</head>
+<body>
 
-    <div class="header">
-      <nav class="navbar">
-        <ul>
-          <li><a href="#">خانه</a></li>
-          <li><a href="#">درباره ما</a></li>
-          <li><a href="#">خدمات</a></li>
-          <li><a href="#">تماس با ما</a></li>
-        </ul>
-      </nav>
-    </div>
+    <!-- هدر -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#!">خانه</a></li>
+                <li><a href="#!">درباره ما</a></li>
+                <li><a href="#!">خدمات</a></li>
+                <li><a href="#!">بلاگ</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div class="container">
-      <div> متن تستی </div>
-      <div>متن تستی دوم</div>
-      <div> متن تستی سوم </div>
-    </div>
-    <div class="container">
-      <div> متن تستی </div>
-      <div>متن تستی دوم</div>
-      <div> متن تستی سوم </div>
-    </div>
-    <footer class="footer">
-      <p>درباره تیم ما </p>
+    <!-- محتوای اصلی -->
+    <main>
+        <section class="about-section">
+            <h2>درباره تیم ما</h2>
+            <p>ما یک تیم حرفه‌ای و خلاق هستیم که در زمینه طراحی وب، توسعه فرانت‌اند، و تجربه کاربری (UI/UX) فعالیت می‌کنیم. هدف ما خلق وب‌سایت‌هایی است که نه تنها از لحاظ ظاهری جذاب باشند بلکه کاربرپسند و کاربردی نیز باشند.</p>
+
+            <!-- باکس‌های اعضای تیم -->
+            <div class="box-container">
+                <!-- عضو اول تیم -->
+                <div>
+                    <img src="./images/avatar.jpg" alt="نام عضو اول">
+                    <h3>رسول حیدروند</h3>
+                    <p>طراح سایت و فرانت‌اند</p>
+                    <p>مهارت‌ها: HTML, CSS, JavaScript, React</p>
+                    <p>من به طراحی وب‌سایت‌های کاربردی و جذاب علاقه دارم و تمام تلاش خود را برای ساخت تجربه‌های کاربری منحصر به فرد به کار می‌برم.</p>
+                </div>
+                              
+                <!-- عضو سوم تیم -->
+                <div>
+                    <img src="./images/avatar.jpg" alt="نام عضو سوم">
+                    <h3>رسول حیدروند</h3>
+                    <p>مهارت‌ها: Figma, Adobe XD, Prototyping</p>
+                    <p>هدف من طراحی رابط‌های کاربری است که نه تنها جذاب، بلکه کاربرپسند و عملی باشند.</p>
+                </div>
+
+                <!-- عضو چهارم تیم -->
+                <div>
+                    <img src="./images/avatar.jpg" alt="نام عضو چهارم">
+                    <h3>مهسا محمدی</h3>
+                    <p>مدیر پروژه</p>
+                    <p>مهارت‌ها: مدیریت پروژه، تیم‌سازی، برنامه‌ریزی</p>
+                    <p>به عنوان مدیر پروژه، هدف من هماهنگی بین اعضای تیم و اطمینان از اینکه پروژه‌ها به موقع و با کیفیت بالا تحویل داده شوند، است.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- فوتر -->
+    <footer>
+        <section id="contact">
+            <p>با ما در ارتباط باشید</p>
+            <h3>email: rasoul6856@gmail.com</h3>
+            <button>عضویت خبرنامه</button>
+            <input type="text" placeholder="ایمیل خود را وارد کنید">
+        </section>
+
+        <section id="links">
+            <h4>لینک‌های مفید</h4>
+            <ul>
+                <li><a href="#">شرایط استفاده</a></li>
+                <li><a href="#">سیاست‌های حریم خصوصی</a></li>
+                <li><a href="#">سوالات متداول</a></li>
+            </ul>
+        </section>
+
+        <section id="rights">
+            <p>تمامی حقوق مربوط به محتویات سایت محفوظ و تحت حقوق مالکیت معنوی است.</p>
+        </section>
     </footer>
-  </body>
+
+</body>
 </html>
