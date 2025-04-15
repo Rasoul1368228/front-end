@@ -1,8 +1,16 @@
+@font-face{
+    font-family: 'vazir';
+    src: url('../font/ttf/Vazirmatn-Bold.ttf') format("truetype"),
+    url('../font/wolf2/Vazirmatn-Bold.woff2') format("woff2");
+    
+}
+
 /* استایل برای بدنه‌ی کل صفحه */
 body {
     padding: 0;
     margin: 0;
-    font-family: 'Dana',fantasy;
+    font-family: 'vazir';
+    /* font-family: 'Dana',fantasy; */
     font-size: 14px;
     background-color: #f79f1f;
     display: flex;
@@ -215,6 +223,6 @@ footer input[type="text"] {
     }
 
     .box-container > div {
-        width: 90%; /* برای موبایل عرض را به 90% کاهش بده */
+        width: 85%; /* برای موبایل عرض را به 90% کاهش بده */
     }
 }
